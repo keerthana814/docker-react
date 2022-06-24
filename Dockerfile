@@ -9,5 +9,5 @@ COPY . .
 CMD ["npm", "run", "build"]
 
 FROM nginx
-EXPOSE 3000 80 443 22
+EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/html
